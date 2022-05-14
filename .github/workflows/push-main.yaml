@@ -11,4 +11,5 @@ jobs:
       BINARY_NAME: reusable-workflows-demo-consumer
       SONAR_PROJECT_KEY: wwsean08_reusable-workflows-demo-consumer
       SONAR_ORGANIZATION: wwsean08
-    secrets: inherit
+    secrets:
+      SONAR_TOKEN: ${{  secrets.SONAR_TOKEN }}
