@@ -1,0 +1,14 @@
+name: Push Main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    uses: wwsean08/reusable-workflows-demo/.github/reusable-go-build-test-scan-simple.yaml@main
+    with:
+      BINARY_NAME: reusable-workflows-demo-consumer
+      SONAR_PROJECT_KEY: wwsean08_reusable-workflows-demo-consumer
+      SONAR_ORGANIZATION: wwsean08
+    secrets: inherit
